@@ -57,7 +57,7 @@ def printAnswer(msgOpp,msgAnswer):
 
 ```python
 #Função que gera as imagens
-def GenerateImg(msgOpp,msgAnswer):
+def GenerateImg(msgOpp,msgAnswer,resultados):
     img=[]
     plt.title('Frequência de valores para o oponente')
     plt.xlabel('Classe')
@@ -106,7 +106,7 @@ def GeneratePDF(msgOpp,msgAnswer):
         pdf.setFont("Helvetica-Bold", 10)
         pdf.drawString(245,724, 'Rodada - Jogada oponente  x  Jogada bot python : Resultado')
         
-        img = GenerateImg()
+        img = GenerateImg(msgOpp,msgAnswer,resultados)
         
         x_start=0
         y_start=600
