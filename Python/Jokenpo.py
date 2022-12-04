@@ -234,7 +234,7 @@ msgAnswer = []
 continua = True
        
 #IP e porta que irá ser acessado
-HOST,PORT = "172.15.1.211",40000
+HOST,PORT = Endereco_Ip,40000
 
 with socket(AF_INET,SOCK_STREAM) as s:
     #Tentativa de conexão
