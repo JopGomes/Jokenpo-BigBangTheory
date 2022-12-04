@@ -54,7 +54,7 @@ def printAnswer(msgOpp,msgAnswer):
     return log
 
 #Função que gera as imagens
-def GenerateImg(msgOpp,msgAnswer):
+def GenerateImg(msgOpp,msgAnswer,resultados):
     img=[]
     plt.title('Frequência de valores para o oponente')
     plt.xlabel('Classe')
@@ -103,7 +103,7 @@ def GeneratePDF(msgOpp,msgAnswer):
         pdf.setFont("Helvetica-Bold", 10)
         pdf.drawString(245,724, 'Rodada - Jogada oponente  x  Jogada bot python : Resultado')
         
-        img = GenerateImg()
+        img = GenerateImg(msgOpp,msgAnswer,resultados)
         
         x_start=0
         y_start=600
@@ -234,7 +234,7 @@ msgAnswer = []
 continua = True
        
 #IP e porta que irá ser acessado
-HOST,PORT = Endereco_Ip,40000
+HOST,PORT = Endereço_IP,40000
 
 with socket(AF_INET,SOCK_STREAM) as s:
     #Tentativa de conexão
